@@ -1,0 +1,43 @@
+body {
+  background-color: rgb(245, 224, 250);
+}
+
+.flower {
+  width: 150px;
+  height: 150px;
+  float: left;
+  margin: 10px;
+  background-color: rgb(255, 0, 255);
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px 5px rgba(255, 0, 255, 0.4);
+  animation: rotate 10s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.flower:nth-child(2) {
+  background-color: rgb(0, 255, 255);
+}
+.flower:nth-child(3) {
+  background-color: rgb(0, 255, 0);
+}
+.flower:nth-child(4) {
+  background-color: rgb(255, 255, 0);
+}
+
+#flower55 {
+  width: 50%;
+  min-width: 150;
+  max-width: 550px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 10;
+}
