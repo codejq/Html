@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=2.0" />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body id="page">
     <img src="images/11.jpg" class="flower" />
     <img src="images/22.jpg" class="flower" />
     <img src="images/33.jpg" class="flower" />
@@ -14,11 +14,22 @@
     <img src="images/55.jpg" id="flower55" />
 
     <script>
-
       const flower55 = document.getElementById("flower55");
-      flower55.addEventListener("click", () => {
-        //flower55.style.display = "none";
+      const page = document.getElementById("page");
+      flower55.addEventListener("click", (e) => {});
+
+      page.addEventListener("mousemove", (e) => {
+        flower55.style.left = e.clientX + "px";
+        flower55.style.top = e.clientY + "px";
+        console.log(e.clientX);
       });
+
+      flower55.addEventListener("mousemove", (e) => {
+        //flower55.style.left = e.clientX + "px";
+        //flower55.style.top = e.clientY + "px";
+        console.log(e.clientX);
+      });
+      cosole.log("test ");
     </script>
   </body>
 </html>
