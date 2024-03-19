@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="headContent">
+          <img src="images/Yeni hayat.png" alt="" />
+          <nav>
+            <a class="pageLink" href="index.html">Home</a>
+            <a class="pageLink" href="contactus.html">Contact</a>
+            <a class="pageLink" href="about.html">About</a>
+            <a class="pageLink" href="ourteam.html">Our Team</a>
+            <a class="pageLink" href="projects.html">projects</a>
+            <a class="pageLink" href="location.html">location</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div id="dashboard">
+      <div id="amount"></div>
+      <div id="base"></div>
+      <div id="date"></div>
+      <div>
+        <table border="1">
+          <tr>
+            <td>Currency</td>
+            <td>Value</td>
+          </tr>
+          <tbody id="rates"></tbody>
+        </table>
+      </div>
+    </div>
+    rates
+    <script>
+      const api = "https://api.frankfurter.app/latest";
+      async function fetchData() {
+        try {
+          const response = await fetch("https://api.frankfurter.app/latest");
+          const data = await response.json();
+          console.log(data);
+          amount.innerHTML = data.amount;
+          base.innerHTML = data.base;
+          date.innerHTML = data.date;
+          Object.keys(data.rates).forEach((rate) => {
+            console.log(rate);
+            rates.innerHTML += `<tr><td>${rate}</td><td>${data.rates[rate]}</td></tr>`;
+          });
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      }
+      fetchData();
+    </script>
+  </body>
+</html>
