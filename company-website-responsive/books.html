@@ -64,6 +64,7 @@
          previous.innerHTML = data.previous;
          var temp = "";
           Object.keys(data).forEach((itemData) => {
+             temp += "<tr>";
             temp += `<td>  ${itemData.id}  </td>`;
             temp += `<td>  ${itemData.title}  </td>`;
             temp += `<td>  ${itemData.Authors}  </td>`;
@@ -74,7 +75,7 @@
             temp += `<td>  ${itemData.copyright}  </td>`;
             temp += `<td>  ${itemData.media_type}  </td>`;
             temp += `<td>  ${itemData.formats}  </td>`;
-            temp += `<td>  ${itemData.download_count}  </td>`;
+            temp += `<td>  ${itemData.download_count}  </td></tr>`;
 
         });
           document.getElementById('data').innerHTML = temp;
