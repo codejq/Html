@@ -2,63 +2,164 @@
 <html>
   <head>
     <title>Home</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
+    />
   </head>
   <body>
-    <header>
-      <div class="container">
-        <div class="headContent">
-          <img src="images/Yeni hayat.png" alt="">
-          <nav>
-            <a class="pageLink" href="index.html">Home</a>
-            <a class="pageLink" href="contactus.html">Contact</a>
-            <a class="pageLink" href="about.html">About</a>
-            <a class="pageLink" href="ourteam.html">Our Team</a>
-            <a class="pageLink" href="projects.html">projects</a>
-            <a class="pageLink" href="location.html">location</a>
-           </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
 
+            <li class="nav-item">
+              <a class="nav-link" href="contactus.html">Contact</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ourteam.html">Our&nbsp;Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html">projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="location.html">location</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link disabled"
+                href="#"
+                tabindex="-1"
+                aria-disabled="true"
+                >Disabled</a
+              >
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
         </div>
       </div>
-    </header>
+    </nav>
 
-<div class="home">
-  <div class="overlay">
-      <div class="hocontent">
-          <h1 class="H">Spaces From Abstract To Reality</h1>
-          <p class="Par">design & build services</p>
-          <button class="btn btn1">view projects</button>
+    <div class="container">
+      <header>
+        <div class="container">
+          <div class="headContent">
+            <img src="images/Yeni hayat.png" alt="" />
+            <nav>
+              <a class="pageLink" href="index.html">Home</a>
+              <a class="pageLink" href="contactus.html">Contact</a>
+              <a class="pageLink" href="about.html">About</a>
+              <a class="pageLink" href="ourteam.html">Our Team</a>
+              <a class="pageLink" href="projects.html">projects</a>
+              <a class="pageLink" href="location.html">location</a>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <div class="home">
+        <div class="overlay">
+          <div class="hocontent">
+            <h1 class="H">Spaces From Abstract To Reality</h1>
+            <p class="Par">design & build services</p>
+            <button class="btn btn1">view projects</button>
+          </div>
+        </div>
       </div>
-  </div>
-</div>
-<footer class="footer">
-  <div class="container">
-      <div class="footcontent" style="line-height: 38px;">  
-        <a class="link" href="index.html">Home</a>
-        <a class="link" href="about.html">About Us</a>
-        <a class="link" href="contactus.html">Contact Us</a>
-        <a class="link" href="projects.html"> Projects</a>
-      </div>
-    <div class="footcontent">
-    <address style="line-height: 42px;">
-      <p>Tel : 000-000-000</p>
-      <p>Address : EGYPT</p>
-      <p>Fax : 000-000-000</p>
-    </address>
-  </div>
-  <div class="footcontent">
-    <a class="a12" href="#"><i class="fab fa-facebook-f"></i></a>
-    <a class="a12" href="#"><i class="fab fa-twitter"></i></a>
-    <a class="a12" href="#"><i class="fab fa-youtube"></i></a>
-    <a class="a12" href="#"><i class="fab fa-linkedin-in"></i></a>
-    <a class="a12" href="#"><i class="fab fa-instagram"></i></a>
-    <a class="a12" href="#"><i class="fab fa-google-plus-g"></i></a>
-  </div>
- <span class="copy">&copy; Copyright 2024 Yeni hayat Company. All Rights Reserved.</span>
-  </div>
- 
-</footer>
-   
+      <footer class="footer">
+        <div class="container">
+          <div class="footcontent" style="line-height: 38px">
+            <a class="link" href="index.html">Home</a>
+            <a class="link" href="about.html">About Us</a>
+            <a class="link" href="contactus.html">Contact Us</a>
+            <a class="link" href="projects.html"> Projects</a>
+          </div>
+          <div class="footcontent">
+            <address style="line-height: 42px">
+              <p>Tel : 000-000-000</p>
+              <p>Address : EGYPT</p>
+              <p>Fax : 000-000-000</p>
+            </address>
+          </div>
+          <div class="footcontent">
+            <a class="a12" href="#"><i class="fab fa-facebook-f"></i></a>
+            <a class="a12" href="#"><i class="fab fa-twitter"></i></a>
+            <a class="a12" href="#"><i class="fab fa-youtube"></i></a>
+            <a class="a12" href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a class="a12" href="#"><i class="fab fa-instagram"></i></a>
+            <a class="a12" href="#"><i class="fab fa-google-plus-g"></i></a>
+          </div>
+          <span class="copy"
+            >&copy; Copyright 2024 Yeni hayat Company. All Rights
+            Reserved.</span
+          >
+        </div>
+      </footer>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
