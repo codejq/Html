@@ -284,10 +284,24 @@ input[type="submit"]:hover {
 }
 
 #dashboard {
-  max-width: 550px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  border: 10px solid #4373af;
+  border: 10px solid rgb(130, 103, 86);
   padding: 20px;
   border-radius: 20px;
 }
+#count,
+#next,
+#previous {
+  font-size: 32px;
+  color: #44310e;
+  padding: 10px;
+}
+.res tr th,.res{
+  padding: 6px;
+  border: 1.5px solid rgb(82, 57, 2);
+  color: rgb(68, 49, 14);
+
+}
+
