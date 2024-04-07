@@ -3,49 +3,24 @@
   <head>
     <title>Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"/>
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <style></style>
   <body>
-    <nav
-      class="navbar navbar-expand-lg navbar-light bg-light sticky-top"
-      style="opacity: 0.8"
-    >
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="opacity: 0.8">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">
-          <img
-            src="images/Yeni hayat.png"
-            width="90px"
-            height="90px"
-            style="border-radius: 50%"
-        /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+          <img src="images/Yeni hayat.png" width="90px" height="90px" style="border-radius: 50%"/></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html"
-                >Home</a
-              >
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contactus.html">Contact</a>
@@ -64,15 +39,8 @@
             </li>
           </ul>
           <form class="d-flex">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+            <button class="btn btn-outline-success" type="submit"> Search </button>
           </form>
         </div>
       </div>
@@ -82,22 +50,13 @@
       <header>
         <div class="container">
           <div class="headContent">
-            <img src="images/Yeni hayat.png" alt="" />
             <nav>
               <a class="pageLink" data-page="home" href="#home">Home</a>
-              <a class="pageLink" data-page="contactus" href="#contactus"
-                >Contact</a
-              >
+              <a class="pageLink" data-page="contactus" href="#contactus">Contact</a>
               <a class="pageLink" data-page="about" href="#about">About</a>
-              <a class="pageLink" data-page="ourteam" href="#ourteam"
-                >Our Team</a
-              >
-              <a class="pageLink" data-page="projects" href="#projects"
-                >projects</a
-              >
-              <a class="pageLink" data-page="location" href="#location"
-                >location</a
-              >
+              <a class="pageLink" data-page="ourteam" href="#ourteam">Our Team</a>
+              <a class="pageLink" data-page="projects" href="#projects">projects</a>
+              <a class="pageLink" data-page="location" href="#location">location</a>
             </nav>
           </div>
         </div>
@@ -106,12 +65,8 @@
           <h1>Welcome to Yeni hayat</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
-        <div class="dynamicPage" id="contactus">
-          <img src="images/office1.jpg" />
-        </div>
-        <div class="dynamicPage" id="about">
-          <img src="images/balcony3.jpg " />
-        </div>
+        <div class="dynamicPage" id="contactus"><img src="images/office1.jpg"/> </div>
+        <div class="dynamicPage" id="about"><img src="images/balcony3.jpg "/></div>
         <div class="dynamicPage" id="ourteam">ourteam</div>
         <div class="dynamicPage" id="projects">projects</div>
         <div class="dynamicPage" id="location">location</div>
@@ -203,33 +158,49 @@
       // fetchData();
 
       async function fetchData2() {
-        try {
-          const response = await fetch("https://gutendex.com/books");
-          const data = await response.json();
-          count.innerHTML = data.count;
-          next.innerHTML = data.next;
-          previous.innerHTML = data.previous;
-          var temp = "";
-          data.results.forEach((itemData) => {
-            temp += `<p><a href="page-${itemData.id}">  ${itemData.title}  </a> </p>`;
-            temp += `<table class="dynamicPage"><tr><td>  ${itemData.id}  </td>`;
-            temp += `<tr> <td>  <img src ='${itemData.formats["image/jpeg"]}' class='response-img' alt=> </td>`;
-            temp += `<tr> <td>  ${itemData.Authors}  </td>`;
-            temp += `<tr> <td>  ${itemData.translators}  </td>`;
-            temp += `<tr> <td>  ${itemData.subjects}  </td>`;
-            temp += `<tr> <td>  ${itemData.bookshelves}  </td>`;
-            temp += `<tr> <td>  ${itemData.languages}  </td>`;
-            temp += `<tr> <td>  ${itemData.copyright}  </td>`;
-            temp += `<tr> <td>  ${itemData.media_type}  </td>`;
-            temp += `<tr> <td>  ${itemData.formats}  </td>`;
-            temp += `<tr> <td>  ${itemData.download_count}  </td></tr></table>`;
-          });
-          document.getElementById("data2").innerHTML = temp;
-        } catch (error) {
-          console.error("Error:", error);
+          try {
+            const response = await fetch("https://gutendex.com/books");
+            const data = await response.json();
+            count.innerHTML = data.count;
+            next.innerHTML = data.next;
+            previous.innerHTML = data.previous;
+            var temp = "";
+            data.results.forEach((itemData) => {
+              // Generate a valid URL for each book's title
+              temp += `<p><a href="#page-${itemData.id}" onclick="showBookDetails(event,'page-${itemData.id}')">${itemData.title}</a></p>`;
+              temp += `<table class="dynamicPage" id="page-${itemData.id}"><tr><td>${itemData.id}</td>`;
+              temp += `<tr><td><img src ='${itemData.formats["image/jpeg"]}' class='response-img' alt=''></td>`;
+              temp += `<tr><td>${itemData.Authors}</td>`;
+              temp += `<tr><td>${itemData.translators}</td>`;
+              temp += `<tr><td>${itemData.subjects}</td>`;
+              temp += `<tr><td>${itemData.bookshelves}</td>`;
+              temp += `<tr><td>${itemData.languages}</td>`;
+              temp += `<tr><td>${itemData.copyright}</td>`;
+              temp += `<tr><td>${itemData.media_type}</td>`;
+              temp += `<tr><td>${itemData.formats}</td>`;
+              temp += `<tr><td>${itemData.download_count}</td></tr></table>`;
+            });
+            document.getElementById("data2").innerHTML = temp;
+          } catch (error) {
+            console.error("Error:", error);
+          }
         }
-      }
+      
+        // Function to show book details
+        function showBookDetails(event,pageId) {
+event.preventDefault();
+console.log(pageId)
+if(document.getElementById(pageId).style.display=='block'){
+  document.getElementById(pageId).style.display="none";
+}
+else
+        {document.getElementById(pageId).style.display="block";}
+
+        }
       fetchData2();
+
+
+
     </script>
     <div class="b-example-divider"></div>
     <div class="container">
@@ -284,15 +255,11 @@
           </div>
         </div>
 
-        <div
-          class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"
-        >
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
           <p>&copy; Copyright 2024 Yeni hayat Company. All Rights Reserved</p>
           <ul class="list-unstyled d-flex">
             <li class="ms-3">
-              <a class="link-dark" href="#"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
+              <a class="link-dark" href="#"><i class="fab fa-facebook-f"></i></a>
             </li>
             <li class="ms-3">
               <a class="link-dark" href="#"><i class="fab fa-twitter"></i></a>
@@ -318,10 +285,8 @@
       </footer>
     </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
   </body>
 </html>
