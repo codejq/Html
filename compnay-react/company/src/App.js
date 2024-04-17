@@ -1,18 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./Header";
+import Footer from "./Footer";
+import Content from "./Content";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <h1>Shimaa</h1>
-      </header>
+      <Header></Header>
+      <Content></Content>
+      <Content></Content>
+      <Footer></Footer>
     </div>
   );
 }
-
 export default App;
