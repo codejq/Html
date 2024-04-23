@@ -37,8 +37,6 @@
   }
 }
 
-.header {
-}
 
 .menux {
   display: inline-flex;
@@ -109,3 +107,34 @@ display: grid;
 justify-content: center;
 padding-left: 60px;
 }
+/* -------------------TicToc------------------ */
+.board {
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto;
+  max-width: 300px;
+}
+.board-row {
+  display: flex;
+}
+.square {
+  background-color: #fff;
+  border: 1px solid #999;
+  font-size: 36px;
+  line-height: 50px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+}
+.square:hover {
+  background-color: #f3f3f3;
+  cursor: pointer;
+}
+.status {
+  margin-bottom: 10px;
+}
+
+
